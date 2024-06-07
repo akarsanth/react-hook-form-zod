@@ -1,8 +1,9 @@
+import { ThemeProvider } from "@/components/theme-provider";
+import OutputProvider from "@/store/output-context";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "./NavBar";
-import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   description: "",
 };
 
+// Root layout
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -25,8 +27,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <NavBar />
-          <main>{children}</main>
+          <OutputProvider>
+            <NavBar />
+            <main className="py-5">{children}</main>
+          </OutputProvider>
         </ThemeProvider>
       </body>
     </html>
