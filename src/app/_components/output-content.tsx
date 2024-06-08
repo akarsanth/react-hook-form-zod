@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import ReactJson from "react-json-view";
+import dynamic from "next/dynamic";
+const DynamicReactJson = dynamic(import("react-json-view"), { ssr: false });
 
 interface Props {
   output: object;
@@ -8,7 +8,7 @@ interface Props {
 
 const OutputContent = ({ output }: Props) => {
   return (
-    <ReactJson
+    <DynamicReactJson
       src={output}
       name={null}
       theme="monokai"
