@@ -22,7 +22,7 @@ export const OutputDialog = ({
 }: Props) => {
   return (
     <Dialog open={showOutput} onOpenChange={setShowOutput}>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[525px]">
         <DialogHeader>
           <DialogTitle>Output</DialogTitle>
           <DialogDescription>

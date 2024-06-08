@@ -22,12 +22,12 @@ export default function Home() {
         <LoginForm />
       </div>
 
-      {isDesktop && (
+      {isDesktop && output && (
         <OutputDialog showOutput={showOutput} setShowOutput={setShowOutput}>
           <OutputContent output={output} />
         </OutputDialog>
       )}
-      {!isDesktop && (
+      {!isDesktop && output && (
         <OutputDrawer showOutput={showOutput} setShowOutput={setShowOutput}>
           <OutputContent output={output} />
         </OutputDrawer>

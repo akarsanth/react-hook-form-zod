@@ -16,6 +16,7 @@ import {
 
 export const NavBar = () => {
   const { setTheme } = useTheme();
+
   return (
     <nav className="mb-4 h-20 border-b">
       <div className="container max-w-screen-lg mx-auto h-full flex items-center justify-between">

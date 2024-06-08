@@ -4,14 +4,14 @@ import React, { createContext, useState } from "react";
 interface OutputContextProps {
   showOutput: boolean;
   setShowOutput: (showOutput: boolean) => void;
-  output: object;
+  output?: object;
   setOutput: (output: object) => void;
 }
 
 export const OutputContext = createContext<OutputContextProps>({
   showOutput: false,
   setShowOutput: () => {},
-  output: {},
+  output: undefined,
   setOutput: () => {},
 });
 
