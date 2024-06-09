@@ -22,14 +22,13 @@ export const OutputDrawer = ({
 }: Props) => {
   return (
     <Drawer open={showOutput} onOpenChange={setShowOutput}>
-      <DrawerContent>
+      <DrawerContent className="max-w-full">
         <DrawerHeader>
           <DrawerTitle>Output</DrawerTitle>
           <DrawerDescription>
             These are the input field values.
           </DrawerDescription>
         </DrawerHeader>
-        {/* content */}
         {children}
         <DrawerFooter>
           <DrawerClose>

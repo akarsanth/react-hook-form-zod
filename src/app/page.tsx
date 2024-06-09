@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <div className="container max-w-screen-sm mx-auto">
-      <h1 className="text-2xl mt-12 mb-16 font-bold underline decoration-double decoration-pink-400 underline-offset-8 leading-10">
+      <h1 className="text-2xl mt-4 sm:mt-12 mb-16 font-bold underline decoration-double decoration-pink-400 underline-offset-8 leading-10">
         Form Validation with Zod and React Hook Form
       </h1>
 
