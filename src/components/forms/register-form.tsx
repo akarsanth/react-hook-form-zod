@@ -38,6 +38,42 @@ export const RegisterForm = () => {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <div className="space-y-4">
+            <div className="space-x-4 flex w-full">
+              <FormField
+                control={form.control}
+                name="firstName"
+                render={({ field }) => (
+                  <FormItem className="flex-1">
+                    <FormLabel>First Name</FormLabel>
+                    <FormControl>
+                      <Input
+                        className="text-base sm:text-sm placeholder:text-sm"
+                        placeholder="John"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="lastName"
+                render={({ field }) => (
+                  <FormItem className="flex-1">
+                    <FormLabel>Last Name</FormLabel>
+                    <FormControl>
+                      <Input
+                        className="text-base sm:text-sm placeholder:text-sm"
+                        placeholder="doe"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
             <FormField
               control={form.control}
               name="email"
@@ -45,7 +81,11 @@ export const RegisterForm = () => {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="john.doe@example.com" {...field} />
+                    <Input
+                      className="text-base sm:text-sm placeholder:text-sm"
+                      placeholder="john.doe@example.com"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -59,7 +99,12 @@ export const RegisterForm = () => {
                 <FormItem>
                   <FormLabel>Password</FormLabel>
                   <FormControl>
-                    <Input type="password" placeholder="******" {...field} />
+                    <Input
+                      className="text-base sm:text-sm placeholder:text-sm"
+                      type="password"
+                      placeholder="******"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -73,7 +118,12 @@ export const RegisterForm = () => {
                 <FormItem>
                   <FormLabel>Confirm Password</FormLabel>
                   <FormControl>
-                    <Input type="password" placeholder="******" {...field} />
+                    <Input
+                      className="text-base sm:text-sm placeholder:text-sm"
+                      type="password"
+                      placeholder="******"
+                      {...field}
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
