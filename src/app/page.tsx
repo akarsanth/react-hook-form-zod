@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1 className="text-2xl mt-1 sm:mt-8 mb-14 sm:mb-16 font-bold underline decoration-double decoration-pink-400 underline-offset-8 leading-10">
+      <h1 className="text-2xl mt-1 sm:mt-8 mb-16 sm:mb-20 font-bold underline decoration-double decoration-pink-400 underline-offset-8 leading-10">
         Form Validation with Zod and React Hook Form
       </h1>
 
