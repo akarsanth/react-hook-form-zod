@@ -6,6 +6,7 @@ import { useContext } from "react";
 import OutputContent from "./_components/output-content";
 import { OutputDialog } from "./_components/output-dialog";
 import { OutputDrawer } from "./_components/output-drawer";
+import { RegisterForm } from "@/components/forms/register-form";
 
 export default function Home() {
   const { showOutput, setShowOutput, output } = useContext(OutputContext);
@@ -13,13 +14,14 @@ export default function Home() {
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
   return (
-    <div className="container max-w-screen-sm mx-auto">
-      <h1 className="text-2xl mt-4 sm:mt-12 mb-16 font-bold underline decoration-double decoration-pink-400 underline-offset-8 leading-10">
+    <div>
+      <h1 className="text-2xl mt-1 sm:mt-8 mb-14 sm:mb-16 font-bold underline decoration-double decoration-pink-400 underline-offset-8 leading-10">
         Form Validation with Zod and React Hook Form
       </h1>
 
-      <div className="space-y-20">
+      <div className="space-y-16">
         <LoginForm />
+        <RegisterForm />
       </div>
 
       {isDesktop && output && (

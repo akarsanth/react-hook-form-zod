@@ -20,9 +20,7 @@ const OutputContent = ({ output }: Props) => {
   return (
     <ScrollArea className="max-h-80 overflow-auto">
       {theme === "light" ? (
-        <>
-          <JsonView value={output} style={{ ...gruvboxTheme, ...style }} />
-        </>
+        <JsonView value={output} style={{ ...gruvboxTheme, ...style }} />
       ) : (
         <JsonView value={output} style={{ ...darkTheme, ...style }} />
       )}

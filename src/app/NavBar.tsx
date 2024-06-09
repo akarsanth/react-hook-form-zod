@@ -17,7 +17,7 @@ export const NavBar = () => {
 
   return (
     <nav className="mb-4 h-20 border-b">
-      <div className="container max-w-screen-lg mx-auto h-full flex items-center justify-between">
+      <div className="container max-w-screen-lg h-full flex items-center justify-between">
         <div className="flex items-center gap-3">
           <SiZod className="text-2xl" />
           <FaRegHandshake />

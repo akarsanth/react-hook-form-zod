@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "./NavBar";
-import { useTheme } from "next-themes";
+import { Footer } from "./Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -30,7 +30,10 @@ export default function RootLayout({
         >
           <OutputProvider>
             <NavBar />
-            <main className="py-5">{children}</main>
+            <main className="container max-w-screen-sm py-5 mb-auto">
+              {children}
+            </main>
+            <Footer />
           </OutputProvider>
         </ThemeProvider>
       </body>
