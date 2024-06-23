@@ -11,6 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Link from "next/link";
 
 export const NavBar = () => {
   const { setTheme } = useTheme();
@@ -19,9 +20,15 @@ export const NavBar = () => {
     <nav className="mb-4 h-20 border-b">
       <div className="container max-w-screen-lg h-full flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <SiZod className="text-2xl" />
+          <a href="https://zod.dev/" target="_blank">
+            <SiZod className="text-2xl" />
+          </a>
+
           <FaRegHandshake />
-          <SiReacthookform className="text-2xl" />
+
+          <a href="https://react-hook-form.com/" target="_blank">
+            <SiReacthookform className="text-2xl" />
+          </a>
         </div>
 
         <DropdownMenu>

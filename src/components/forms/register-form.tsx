@@ -34,7 +34,7 @@ export const RegisterForm = () => {
   };
 
   return (
-    <FormWrapper label="Register Form">
+    <FormWrapper title="Register Form">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <div className="space-y-4">
